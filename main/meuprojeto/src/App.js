@@ -1,4 +1,6 @@
 import CharacterSelection from "./components/CharacterSelection";
+import React from "react";
+import { app } from "./firebase-config";
 
 function App() {
   return (
