@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(92, 2, 124);
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.character-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Espaço entre os personagens */
+  width: 100%; /* Ocupa toda a largura */
+  overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+  padding: 10px; /* Espaço extra para melhor visualização */
+}
+
+/* Melhorando o efeito de hover e clique */
+.character-box {
+  cursor: pointer;
+  padding: 16px;
+  text-align: center;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background-color: #8c0eaf;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  width: 170px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Efeito ao passar o mouse */
+.character-box:hover {
+  border-color: #ffcc00; /* Cor da borda ao passar o mouse */
+  box-shadow: 0 6px 10px rgba(255, 204, 0, 0.5);
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Quando o personagem está selecionado */
+.selected {
+  border-color: #3b82f6 !important; /* Azul quando selecionado */
+  background-color: white;
+}
+
+/* Imagem do personagem */
+.character-image {
+  width: 150px;
+  height: 200px;
+  margin-bottom: 8px;
+}
+
+/* Nome do personagem */
+.character-name {
+  font-weight: bold;
+}
+/* Tela de senha */
+.password-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.password-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.password-button:hover {
+  background-color: #2563eb;
+}
+
+/* Imagem grande quando selecionado */
+.large-character-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de voltar */
+.back-button {
+  background-color: #ff5555;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.back-button:hover {
+  background-color: #e04444;
+}
+.character-sheet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #222;
+  min-height: 100vh;
+}
+
+.character-title {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sheet-wrapper {
+  position: relative;
+}
+
+.character-sheet {
+  width: 320px;
+  height: auto;
+  display: block;
+}
+
+/* Estilização dos inputs */
+.input {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 12px;
+  text-align: center;
+  width: 60px;
+  height: 15px;
+  border-radius: 4px;
+}
+
+/* Posicionamento dos campos na ficha */
+.name { top: 10px; left: 50px; width: 100px; }
+.item { top: 10px; left: 200px; width: 100px; }
+
+.hp { top: 50px; left: 50px; }
+.mp { top: 70px; left: 50px; }
+.atk { top: 90px; left: 50px; }
+.exp { top: 110px; left: 50px; }
+.nivel { top: 130px; left: 50px; }
+.expPoints { top: 150px; left: 50px; width: 100px; }
+
+.def { top: 50px; left: 200px; }
+.defMp { top: 70px; left: 200px; }
+.velo { top: 90px; left: 200px; }
+
+/* Botão de voltar */
+.back-button {
+  margin-top: 20px;
+  background-color: #ff5555;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #e04444;
+}
+.password-input.error {
+  animation: shake 0.3s ease-in-out;
+  border-color: red;
+}
+  /* Animação de erro para senha incorreta */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
